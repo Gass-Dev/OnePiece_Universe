@@ -1,11 +1,18 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@font-face {
+  font-family: "Petrona";
+  src: local("Petrona_Bold"),
+    url("./assets/fonts/Petrona-Bold.ttf") format("truetype");
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@font-face {
+  font-family: "DellaRespira";
+  src: local("DellaRespir_Regular"),
+    url("./assets/fonts/DellaRespira-Regular.ttf") format("truetype");
+}
+
+:root {
+  color: #040D12;
+  background-color: #E5D8BF;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,26 +21,32 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.LogoHome {
+  height: 100px;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  min-width: 100vw;
   min-height: 100vh;
+  font-family: "Petrona", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #040D12;
+  background-color: #E5D8BF;
 }
 
 h1 {
+  font-family: "Petrona", system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+a {
+  font-weight: 500;
+  color: #040D12;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #17191a;
 }
 
 button {
@@ -43,12 +56,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #040D12;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #17191a;
 }
 button:focus,
 button:focus-visible {
@@ -57,13 +70,13 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #040D12;
+    background-color: #E5D8BF;
   }
   a:hover {
-    color: #747bff;
+    color: #17191a;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #040D12;
   }
 }

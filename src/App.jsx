@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+// import onePieceLogo from "./assets/images/One_Piece_Black_Logo.png";
+import "./App.css";
+
+//import Nav
+import Layout from "./pages/Layout"
+
+// import pages
+import Home from "./pages/Home"
+import NoPage from"./pages/NoPages"
+import Personnages from "./pages/Personnages"
+import Equipages from "./pages/Equipages"
+import Fruits_Demon from "./pages/Fruits_Demon"
+import Bateaux from "./pages/Bateaux"
+import Lieux from "./pages/Lieux"
+import Hakis from "./pages/Hakis"
+import Sabres from "./pages/Sabres"
+import Episodes from "./pages/Episodes"
+import Luffy from "./pages/Luffy"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <><BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="personnages" element={<Personnages />} />
+        <Route path="equipages" element={<Equipages />} />
+        <Route path="fruits_demon" element={<Fruits_Demon />} />
+        <Route path="bateaux" element={<Bateaux />} />
+        <Route path="lieux" element={<Lieux />} />
+        <Route path="hakis" element={<Hakis />} />
+        <Route path="sabres" element={<Sabres />} />
+        <Route path="episodes" element={<Episodes />} />
+        <Route path="luffy" element={<Luffy />} />
+        <Route path="*" element={<NoPage />} />
+        
+      </Route>
+    </Routes>
+  </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
+{/* <div>
+<img className="LogoHome" src={onePieceLogo} alt="Logo One Piece" />
+</div> */}
