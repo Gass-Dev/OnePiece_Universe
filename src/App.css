@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 2%;
   text-align: center;
+  background-color: #1f2430;
+  border-radius: 5px;
 }
 
 @keyframes logo-spin {
@@ -26,4 +26,122 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* fiche wanted */
+.fiches-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.fiche-wanted {
+  color: #eadbc8;
+  background-color: #040d12;
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #040d12;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nom-personnage {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.prime {
+  font-size: 18px;
+}
+
+.photo-personnage {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #f6f4eb;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.texte-wanted {
+  font-family: "Petrona", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.job {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* equipages */
+.cartes-container-equipage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+}
+
+.carte-equipage {
+  width: 20%;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #040d12;
+  color: #f6f4eb;
+}
+
+.carte-equipage h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.photo-equipage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #eadbc8;
+  margin: 10px auto;
+}
+
+.carte-equipage p {
+  font-size: 0.9rem;
+}
+
+.carte-equipage h3 {
+  font-size: 1rem;
+}
+
+/* fruits du demon */
+.fiches-container-fruitsDemon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+  color: #eadbc8;
+}
+
+.carte-fruit {
+  width: 20%;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #040d12;
+  color: #f6f4eb;
+}
+
+.carte-fruit h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.carte-fruit p {
+  font-size: 0.9rem;
 }
