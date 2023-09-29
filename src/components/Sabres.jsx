@@ -17,7 +17,7 @@ function Sabres() {
   }, []);
 
   const cardSabres = sabres.map((sabre) => (
-    <div key={sabre.id} className="card">
+    <div key={sabre.id} className="fiche-wanted">
       <h2>{sabre.french_name}</h2>
       <p>{sabre.type}</p>
     </div>
@@ -30,12 +30,12 @@ function Sabres() {
     speed: 800,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
   };
 
   return (
-    <div>
+    <div className="sabres">
       <h1>Les Sabres</h1>
       <Slider {...settings}>{cardSabres}</Slider>
     </div>

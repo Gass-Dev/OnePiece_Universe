@@ -17,18 +17,17 @@ function Hakis() {
   }, []);
 
   const cardHakis = hakis.map((haki) => (
-    <div key={haki.id} className="card">
-      <h2>{haki.french_name}</h2>
-      <p>{haki.description}</p>
+    <div key={haki.id} className="fiche-hakis">
+      <h2 className="nom-personnage">{haki.french_name}</h2>
+      <p  className="text-hakis">{haki.description}</p>
     </div>
   ));
 
-  // Configuration du carrousel
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 800,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,

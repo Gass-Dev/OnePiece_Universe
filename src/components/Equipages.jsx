@@ -29,7 +29,7 @@ function Equipages() {
         equipage.total_prime !== "-"
     )
     .map((equipage) => (
-      <div key={equipage.id} className="carte-equipage">
+      <div key={equipage.id} className="fiche-wanted">
         <h2>{equipage.french_name}</h2>
         <img
           className="photo-equipage"
@@ -48,7 +48,7 @@ function Equipages() {
     speed: 800,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
   };
 

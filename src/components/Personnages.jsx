@@ -23,7 +23,8 @@ function Personnage() {
       <div key={character.id} className="fiche-wanted">
         <div className="texte-wanted">Wanted</div>
         <div className="nom-personnage">{character.french_name}</div>
-        <div className="job">{character.job}</div>
+        <div className="job">{character.job} 🏴‍☠️</div>
+
         <img
           className="photo-personnage"
           src={Luffy}
@@ -37,11 +38,11 @@ function Personnage() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 800,
+    speed: 1000,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
   };
 
   return (

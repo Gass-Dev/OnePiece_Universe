@@ -17,7 +17,7 @@ function Bateaux() {
   }, []);
 
   const cardBateaux = bateaux.map((bateau) => (
-    <div key={bateau.id} className="card">
+    <div key={bateau.id} className="fiche-wanted">
       <h2>{bateau.french_name}</h2>
       <p>{bateau.type}</p>
     </div>
@@ -30,7 +30,7 @@ function Bateaux() {
     speed: 800,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
   };
 

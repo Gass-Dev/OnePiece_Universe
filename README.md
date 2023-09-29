@@ -8,4 +8,4 @@ Website sur l'univers One Piece
 - React Slick pour réaliser un carousel
 https://www.npmjs.com/package/react-slick 
 
-
+- React youtube pour lire une video

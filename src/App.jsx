@@ -7,7 +7,6 @@ import Layout from "./pages/Layout";
 // import pages
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPages";
-import Univers from "./pages/Univers";
 import Personnages from "./components/Personnages";
 import Equipages from "./components/Equipages";
 import Fruits_Demon from "./components/Fruits_Demon";
@@ -17,6 +16,7 @@ import Hakis from "./components/Hakis";
 import Sabres from "./components/Sabres";
 import Episodes from "./pages/Episodes";
 import Luffy from "./pages/Luffy";
+import Avis from "./pages/Avis";
 
 function App() {
   return (
@@ -25,7 +25,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="univers" element={<Univers />} />
             <Route path="personnages" element={<Personnages />} />
             <Route path="equipages" element={<Equipages />} />
             <Route path="fruits_demon" element={<Fruits_Demon />} />
@@ -35,6 +34,7 @@ function App() {
             <Route path="sabres" element={<Sabres />} />
             <Route path="episodes" element={<Episodes />} />
             <Route path="luffy" element={<Luffy />} />
+            <Route path="avis" element={<Avis/>} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>

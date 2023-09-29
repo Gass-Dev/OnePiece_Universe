@@ -1,7 +1,9 @@
 const menu = [
-  { id: 3, to: "/", name:"L'univers One Piece"},
-  { id: 4, to: "/episodes", name: "Les épisodes" },
-  { id: 5, to: "/luffy", name: "Luffy" },
+  { id: 1, to: "/", name:"L'univers One Piece"},
+  { id: 2, to: "/episodes", name: "Les épisodes" },
+  { id: 3, to: "/luffy", name: "Luffy" },
+  { id: 4, to: "/avis", name: "Vos avis" },
+
 ];
 
 export default menu;

@@ -18,16 +18,13 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
 }
 
 /* fiche wanted */
 .fiches-container {
+  height: 560px !important;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -38,10 +35,18 @@
   height: auto;
   color: #eadbc8;
   background-color: #040d12;
-  width: 200px;
-  padding: 20px;
-  border: 2px solid #040d12;
-  border-radius: 10px;
+  border-left: 2px solid #ebebeb;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.fiche-hakis {
+  height: 200px;
+  color: #eadbc8;
+  background-color: #040d12;
+  border-left: 2px solid #ebebeb;
+  padding: 30px;
   text-align: center;
 }
 
@@ -56,8 +61,6 @@
 }
 
 .photo-personnage {
-  width: 100px;
-  height: 100px;
   border: 2px solid #f6f4eb;
   border-radius: 50%;
   margin: 0 auto 10px;
@@ -67,6 +70,11 @@
   font-family: "Petrona", system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 3em;
   font-weight: bold;
+}
+.text-hakis {
+  font-size: 0.8em;
+  width: 30vw;
+  text-align: left ;
 }
 
 .job {
@@ -100,10 +108,9 @@
 }
 
 .photo-equipage {
-  width: 100px;
+  width: 200px;
   height: 100px;
-  border-radius: 50%;
-  border: 2px solid #eadbc8;
+  border-radius: 10px;
   margin: 10px auto;
 }
 
@@ -115,16 +122,6 @@
   font-size: 1rem;
 }
 
-/* fruits du demon */
-.fiches-container-fruitsDemon {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 80vw;
-  margin: auto;
-  color: #eadbc8;
-}
-
 .card{
   width: 20%;
   margin: 20px;
@@ -133,4 +130,44 @@
   border-radius: 10px;
   background-color: #040d12;
   color: #f6f4eb;
+}
+
+.sabres {
+margin-top: 50px;
+}
+
+.card-fruit {
+  height: 200px;
+  font-size: 0.8em;
+  width: 30vw;
+}
+
+.episodes {
+height: 600px;
+}
+
+.video {
+  margin-top: 120px;
+}
+
+.photo-equipeLuffy {
+  margin-top: 40px;
+}
+
+.input {
+  width: 40vw;
+  height: 10vh;
+}
+
+.buttonInput {
+  margin: 20px;
+  height: 65px;
+  width: 65px;
+  color:#ebebeb;
+  background: #040d12;
+  border-radius: 5px;
+}
+
+.buttonInput:hover{
+background-color: #888;
 }

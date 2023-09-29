@@ -17,10 +17,9 @@ function Lieux() {
   }, []);
 
   const cardLieux = lieux.map((lieu) => (
-    <div key={lieu.id} className="card">
+    <div key={lieu.id} className="fiche-wanted">
       <h2>{lieu.french_name}</h2>
       <p>{lieu.sea_name}</p>
-      <p>{lieu.region_name}</p>
     </div>
   ));
 
@@ -30,7 +29,7 @@ function Lieux() {
     speed: 800,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
   };
 
