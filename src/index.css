@@ -12,15 +12,20 @@
 
 :root {
   -webkit-text-size-adjust: 100%;
+  margin: 0;
 }
 
 nav {
+  width: 60vw;
   height: 40px;
+  margin: auto;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #040d12;
+  background-color: #d53633;
+  background-size: auto 100%;
 }
 
 .LogoHome {
@@ -29,15 +34,22 @@ nav {
 }
 
 .layout {
-  padding: 20px 80px;
-  color: #f6f4eb !important;
+  padding-top: 10px;
+  background-color: #d53633;
+  box-shadow: 0 0.8rem 0.8rem -0.4rem rgba(0,0,0,.25);
+  background-size: auto 100%;
 }
 
 body {
   font-family: "Petrona", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #040d12;
+  background-color: #ebebeb;
+  margin: 0;
 }
 
 a {
   text-decoration: inherit;
+}
+
+.menu-item {
+  color: white !important;
 }

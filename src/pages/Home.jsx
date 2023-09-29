@@ -1,14 +1,22 @@
-import onePieceLogo from "../assets/images/One_Piece_Black_Logo.png";
+import Personnages from "../components/Personnages"
+import Equipages from "../components/Equipages"
+import FruitsDemon from "../components/Fruits_Demon"
+import Hakis from "../components/Hakis"
+import Lieux from "../components/Lieux"
+import Bateaux from "../components/Bateaux"
+import Sabres from "../components/Sabres"
+
 
 function Home() {
   return (
     <>
-      <div>
-        <img className="LogoHome" src={onePieceLogo} alt="Logo One Piece" />
-      </div>
-      <div>
-        <h1>Le roi des pirates, ce sera moi!</h1>
-      </div>
+      <Personnages />
+      <Sabres />
+      <Equipages />
+      <Bateaux />
+      <FruitsDemon />
+      <Hakis />
+      <Lieux />
     </>
   );
 }

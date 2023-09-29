@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function FruitsDuDemon() {
   const [fruits, setFruits] = useState([]);
@@ -14,17 +17,28 @@ function FruitsDuDemon() {
   }, []);
 
   const cartesFruits = fruits.map((fruit) => (
-    <div key={fruit.id} className="carte-fruit">
+    <div key={fruit.id} className="card">
       <h2>{fruit.french_name}</h2>
       <p>Type : {fruit.type}</p>
       <p>{fruit.description}</p>
     </div>
   ));
 
+  // Configuration du carrousel
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
   return (
     <div>
       <h1>Les Fruits du Démon</h1>
-      <div className="fiches-container-fruitsDemon">{cartesFruits}</div>
+      <Slider {...settings}>{cartesFruits}</Slider>{" "}
     </div>
   );
 }

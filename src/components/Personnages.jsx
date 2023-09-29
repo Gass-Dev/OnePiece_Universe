@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Slider from "react-slick"; // Importe le composant Slider de react-slick
+import "slick-carousel/slick/slick.css"; // Importe les styles de slick-carousel
+import "slick-carousel/slick/slick-theme.css"; // Importe les styles du thème de slick-carousel
 import Luffy from "../assets/images/Luffy.png";
 
 function Personnage() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    // Utilisation d'Axios pour effectuer la requête API
     axios
       .get("https://api.api-onepiece.com/characters")
       .then((response) => {
-        // Met à jour l'état avec les données des personnages
         setCharacters(response.data);
       })
       .catch((error) => console.error(error));
-  }, []); // Le tableau vide [] signifie que cela se produit une seule fois lors du montage du composant
+  }, []);
 
   const fichesWanted = characters
-    .filter((character) => character.bounty && character.bounty !== "inconnu") // Filtrer les personnages avec une prime définie
+    .filter((character) => character.bounty && character.bounty !== "inconnu")
     .map((character) => (
       <div key={character.id} className="fiche-wanted">
         <div className="texte-wanted">Wanted</div>
@@ -32,10 +33,20 @@ function Personnage() {
       </div>
     ));
 
+  // Configuration du carrousel
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
   return (
     <div>
-      <h1>Les personnages</h1>
-      <div className="fiches-container">{fichesWanted}</div>
+      <Slider {...settings}>{fichesWanted}</Slider>{" "}
     </div>
   );
 }

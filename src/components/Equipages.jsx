@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import EquipageLuffy from "../assets/images/equipage_luffy.jpeg";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function Equipages() {
   const [equipages, setEquipages] = useState([]);
 
@@ -37,10 +41,21 @@ function Equipages() {
       </div>
     ));
 
+      // Configuration du carrousel
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
   return (
     <div>
       <h1>Les équipages</h1>
-      <div className="cartes-container-equipage">{cartesEquipages}</div>
+      <Slider {...settings}>{cartesEquipages}</Slider>{" "}
     </div>
   );
 }

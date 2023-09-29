@@ -1,8 +1,6 @@
 #root {
-  margin: 2%;
+  margin: 0;
   text-align: center;
-  background-color: #1f2430;
-  border-radius: 5px;
 }
 
 @keyframes logo-spin {
@@ -37,11 +35,11 @@
 }
 
 .fiche-wanted {
+  height: auto;
   color: #eadbc8;
   background-color: #040d12;
   width: 200px;
   padding: 20px;
-  margin: 20px;
   border: 2px solid #040d12;
   border-radius: 10px;
   text-align: center;
@@ -127,7 +125,7 @@
   color: #eadbc8;
 }
 
-.carte-fruit {
+.card{
   width: 20%;
   margin: 20px;
   padding: 10px;
@@ -135,13 +133,4 @@
   border-radius: 10px;
   background-color: #040d12;
   color: #f6f4eb;
-}
-
-.carte-fruit h2 {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-
-.carte-fruit p {
-  font-size: 0.9rem;
 }
