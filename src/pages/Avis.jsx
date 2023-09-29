@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
+import YouTube from "react-youtube";
 
 function Avis() {
   const [avisList, setAvisList] = useState([]);
   const [nouvelAvis, setNouvelAvis] = useState("");
 
   useEffect(() => {
-    const avisEnregistres = JSON.parse(localStorage.getItem("avisList")) || [];
-    setAvisList(avisEnregistres);
+    const avisEnregistres = JSON.parse(localStorage.getItem("avisList"));
+    if (avisEnregistres) {
+      setAvisList(avisEnregistres);
+    }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("avisList", JSON.stringify(avisList));
+    if (avisList.length > 0) {
+      localStorage.setItem("avisList", JSON.stringify(avisList));
+    }
   }, [avisList]);
 
   // ajouter un avis
@@ -21,21 +26,30 @@ function Avis() {
     }
   };
 
-  // supprimer un avi
+  // supprimer un avis
   const supprimerAvis = (index) => {
     const nouvelleListe = [...avisList];
     nouvelleListe.splice(index, 1);
     setAvisList(nouvelleListe);
   };
 
+  // configuration video
+  const videoOptions = {
+    width: "100%",
+    playerVars: {
+      autoplay: 1,
+      mute: 1,
+    },
+  };
+
   return (
-    <div>
-      <h1>On partage nos avis</h1>
+    <div className="avis-container">
+      <h1 className="avis-title">On partage nos avis</h1>
       <div>
         <input
           className="input"
           type="text"
-          placeholder="Ajouter un avis..."
+          placeholder="Donne ton avis..."
           value={nouvelAvis}
           onChange={(e) => setNouvelAvis(e.target.value)}
         />
@@ -56,6 +70,9 @@ function Avis() {
           </li>
         ))}
       </ul>
+      <div className="video">
+          <YouTube videoId="z1FGY-Y69U0" opts={videoOptions} />
+        </div>
     </div>
   );
 }

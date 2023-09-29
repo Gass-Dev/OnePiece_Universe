@@ -12,6 +12,7 @@ function Luffy() {
       mute: 1,
     },
   };
+  
   return (
     <>
       <div>
